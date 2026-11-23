@@ -1,0 +1,215 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1c1917;
+  --primary: #ed9d23;
+  --primary-foreground: #ffffff;
+  --button-hover: var(--primary);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-amber-600: #ed9d23;
+  --font-sans: var(--font-sans), system-ui, sans-serif;
+  --font-display: var(--font-display), Georgia, serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c3c3c3;
+    border-radius: 5px
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+    border-radius: 5px
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 5px
+}
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+}
+
+.prose img {
+  border-radius: 0.75rem;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::after {
+  content: "+";
+  float: right;
+  font-weight: bold;
+}
+
+details[open] summary::after {
+  content: "−";
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-whatsapp {
+  min-width: max-content;
+  width: max-content;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 14px 37px;
+  text-transform: capitalize;
+  background-color: transparent !important;
+  transition: color 0.25s 0.08333s, all 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 0;
+  position: relative;
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  text-decoration: none;
+}
+
+.btn-primary {
+  color: var(--foreground);
+  box-shadow: inset 0 0 0 1px var(--foreground);
+}
+
+.btn-secondary {
+  color: var(--background);
+  box-shadow: inset 0 0 0 1px var(--background);
+}
+
+.btn-whatsapp {
+  color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn-primary::before,
+.btn-primary::after,
+.btn-secondary::before,
+.btn-secondary::after,
+.btn-whatsapp::before,
+.btn-whatsapp::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.btn-primary::before,
+.btn-secondary::before,
+.btn-whatsapp::before {
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+}
+
+.btn-primary::after,
+.btn-secondary::after,
+.btn-whatsapp::after {
+  border-top-width: 2px;
+  border-left-width: 2px;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-whatsapp:hover {
+  color: var(--button-hover);
+}
+
+.btn-primary:hover::before,
+.btn-primary:hover::after,
+.btn-secondary:hover::before,
+.btn-secondary:hover::after,
+.btn-whatsapp:hover::before,
+.btn-whatsapp:hover::after {
+  border-color: var(--button-hover);
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-primary:hover::before,
+.btn-secondary:hover::before,
+.btn-whatsapp:hover::before {
+  transition-delay: 0s, 0s, 0.25s;
+}
+
+.btn-primary:hover::after,
+.btn-secondary:hover::after,
+.btn-whatsapp:hover::after {
+  transition-delay: 0s, 0.25s, 0s;
+}
+
+.btn-primary:disabled,
+.btn-secondary:disabled,
+.btn-whatsapp:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.btn-block {
+  width: 100%;
+  min-width: 100%;
+}
+
+@media (max-width: 1600px) {
+  .btn-primary,
+  .btn-secondary,
+  .btn-whatsapp {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .btn-primary,
+  .btn-secondary,
+  .btn-whatsapp {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 430px) {
+  .btn-primary,
+  .btn-secondary,
+  .btn-whatsapp {
+    padding: 8px 14px;
+  }
+}
+
+.about-hero-image,
+.hero-banner-image {
+  transition: transform 8s ease-out;
+}
+
+.about-hero-swiper .swiper-slide-active .about-hero-image,
+.hero-banner-swiper .swiper-slide-active .hero-banner-image {
+  transform: scale(1.06);
+}
+.cstmt{
+  margin-top: 72px;
+}

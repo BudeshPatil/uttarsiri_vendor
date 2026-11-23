@@ -1,0 +1,17 @@
+export const SERVICE_FEATURE_OPTIONS = [
+  'One-to-One Coaching Sessions',
+  'Personal Transformation Coaching',
+  'Life Clarity & Goal Setting',
+  'Mindset & Confidence Coaching',
+  'Career & Leadership Coaching',
+  'Relationship & Communication Coaching',
+  'Public Speaking & Presentation Skills',
+  'Stress Management & Emotional Wellbeing',
+  'Accountability & Action Planning',
+  'Personalized Growth Roadmap',
+  'Practical Exercises & Reflection Tools',
+  'Progress Tracking & Check-ins',
+  'Online Coaching Sessions',
+  'Group Workshops & Masterclasses',
+  'Corporate Coaching Programs',
+];
